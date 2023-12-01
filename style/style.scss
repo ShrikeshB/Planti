@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1em 4em;
+
+    .logo {
+        width: 25%;
+
+        p {
+            font-weight: 700;
+            font-size: 28px;
+        }
+    }
+
+    .icons {
+        width: 25%;
+
+        img {
+            width: 8%;
+            float: right;
+            margin-left: 1em;
+        }
+
+    }
+
+    .nav-item {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            list-style: none;
+
+            li~li {
+                margin-left: 2em;
+            }
+        }
+    }
+}
+
+
+.container {
+    display: flex;
+    padding: 1em 4em;
+    margin-top: 1em;
+
+    .left {
+        width: 50%;
+
+        h1 {
+            font-size: 5em;
+        }
+
+        .t2 {
+            display: flex;
+            align-items: center;
+
+            .img-container {
+                margin-left: 2em;
+                @include flexCenter;
+                width: 120px;
+                height: 50px;
+                border-radius: 5em;
+                overflow: hidden;
+
+            }
+        }
+
+        .cards {
+            display: flex;
+            width: 100%;
+            margin-top: 8em;
+
+            .card {
+                background-color: #014b01;
+                color: white;
+                @include flexCenter();
+                padding: 1em;
+                position: relative;
+                width: 50%;
+                height: 150px;
+                border-radius: 1em;
+
+                .img-container {
+                    position: absolute;
+                    top: 0em;
+                    width: 80%;
+                    height: 100%;
+                    left: 0;
+                    @include flexCenter();
+
+                    img {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+
+                .content {
+                    width: 50%;
+                    position: absolute;
+                    right: -4em;
+
+                    h1 {
+                        font-size: 18px;
+                        margin-bottom: .5em;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        margin-bottom: .5em;
+                    }
+
+                    button {
+                        background-color: #fff;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 12px;
+                        padding: .5em 1em;
+                    }
+                }
+
+            }
+
+            .card+.card {
+                margin-left: 2em;
+            }
+        }
+    }
+
+    .right {
+        width: 50%;
+        @include flexCenter();
+
+        .img-container {
+            width: 60%;
+            overflow: hidden;
+
+            img {
+                border-radius: 15em;
+                width: 100%;
+            }
+        }
+    }
+
+    .btns {
+        display: flex;
+        align-items: center;
+        margin-top: 4em;
+
+        button {
+            background-color: #014b01;
+            border: none;
+            color: white;
+            padding: 1em 2em;
+            border-radius: .5em;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            @include flexCenter();
+            width: 40%;
+            font-weight: 500;
+
+            img {
+                width: 8%;
+                margin-left: .6em;
+            }
+        }
+    }
+}
