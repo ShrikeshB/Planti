@@ -1,6 +1,6 @@
 # Planti
 
-![Uploading ss.PNG…]()
+
 
 ## What this website is about?
 * It is a ecommerce website where users can buy plant.
